@@ -35,8 +35,9 @@ Follow the "How do I find my profile?" procedure on that page to get the profile
 
 Examples: (note that some parts _will_ be different for you!)
 
-- **Linux**: `/home/samantha/.mozilla/firefox/xm5axf8v.default-release`, to which you append `/places.sqlite`
-- **Windows**: `C:\Users\Samantha\AppData\Roaming\Mozilla\Firefox\Profiles\6c3u6a3w.default-release`, to which you append `\places.sqlite`
+- **macOS**: `~/Library/Application Support/Firefox/Profiles/xm5axf8v.default-release/places.sqlite`
+- **Linux**: `/home/samantha/.mozilla/firefox/xm5axf8v.default-release/places.sqlite`
+- **Windows**: `C:\Users\Samantha\AppData\Roaming\Mozilla\Firefox\Profiles\6c3u6a3w.default-release\places.sqlite`
 
 You can also attempt to locate the file manually, patterning after the above paths.
 (On Windows, the `AppData` directory is typically hidden; you should be able to access it by entering `%APPDATA%` into the file explorer's location bar.)
