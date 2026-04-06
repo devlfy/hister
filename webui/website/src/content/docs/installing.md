@@ -16,29 +16,34 @@ If you are using a server already set up by someone else, and you aren't plannin
 
    | Platform | File to download |
    |----------|-----------------|
-   | macOS, Apple Silicon (M1/M2/M3) | `hister_darwin_arm64` |
-   | macOS, Intel | `hister_darwin_amd64` |
-   | Linux, 64-bit | `hister_linux_amd64` |
-   | Linux, ARM64 | `hister_linux_arm64` |
-   | Windows, 64-bit | `hister_windows_amd64.exe` |
+   | macOS, Apple Silicon (M1/M2/M3) | `hister_<version>_darwin_arm64` |
+   | macOS, Intel | `hister_<version>_darwin_amd64` |
+   | Linux, 64-bit | `hister_<version>_linux_amd64` |
+   | Linux, ARM64 | `hister_<version>_linux_arm64` |
+   | Windows, 64-bit | `hister_<version>_windows_amd64.exe` |
 
    > **Careful:** GitHub also shows "Source code" archives (`hister-x.y.z.tar.gz`, `Source code (zip)`) at the bottom of each release's Assets section. Those contain the source code and need to be compiled — they are _not_ what you want here.
 
-2. Make the binary executable:
+2. Open a terminal **in the folder where you downloaded the file** (e.g. `cd ~/Downloads`), then make the binary executable:
 
    ```bash
-   chmod +x hister
+   chmod +x hister_*_darwin_arm64   # adjust filename to match what you downloaded
    ```
 
 3. **macOS only** — Remove the quarantine flag that macOS applies to downloaded files. Without this step, macOS will refuse to run the binary with a "cannot be opened because the developer cannot be verified" error:
 
    ```bash
-   xattr -d com.apple.quarantine hister
+   xattr -d com.apple.quarantine hister_*_darwin_arm64
    ```
 
    Alternatively, after attempting to run `hister` once, go to **System Settings → Privacy & Security** and click **Allow Anyway**.
 
-4. Optionally, move it to somewhere on your `PATH`; for example, `/usr/local/bin/` (system-wide) or `~/.local/bin/` (per-user).
+4. Optionally, rename it and move it to somewhere on your `PATH` for convenience:
+
+   ```bash
+   mv hister_*_darwin_arm64 hister
+   mv hister /usr/local/bin/   # system-wide; or ~/.local/bin/ for per-user
+   ```
 
 ## Building from Source
 
