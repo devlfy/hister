@@ -10,7 +10,19 @@ If you are using a server already set up by someone else, and you aren't plannin
 
 ## Pre-built Binary
 
-1. Download the binary for your platform: - For stable versions: [Releases](https://github.com/asciimoo/hister/releases) - For the latest development version: [Rolling Release (latest)](https://github.com/asciimoo/hister/releases/tag/rolling)
+1. Go to the [Releases page](https://github.com/asciimoo/hister/releases) (or the [Rolling Release](https://github.com/asciimoo/hister/releases/tag/rolling) for the latest development version).
+
+   In the **Assets** section, download the file matching your platform and architecture:
+
+   | Platform | File to download |
+   |----------|-----------------|
+   | macOS, Apple Silicon (M1/M2/M3) | `hister_darwin_arm64` |
+   | macOS, Intel | `hister_darwin_amd64` |
+   | Linux, 64-bit | `hister_linux_amd64` |
+   | Linux, ARM64 | `hister_linux_arm64` |
+   | Windows, 64-bit | `hister_windows_amd64.exe` |
+
+   > **Careful:** GitHub also shows "Source code" archives (`hister-x.y.z.tar.gz`, `Source code (zip)`) at the bottom of each release's Assets section. Those contain the source code and need to be compiled — they are _not_ what you want here.
 
 2. Make the binary executable:
 
