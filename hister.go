@@ -1063,7 +1063,7 @@ func importDB(dbFile string, table string, cmd *cobra.Command) {
 		exit(1, "No URLs found to import")
 	}
 
-	if !yesNoPrompt(fmt.Sprintf("%d URLs found. Start import form "+dbFile, count), true) {
+	if !yesNoPrompt(fmt.Sprintf("%d URLs found. Start import from "+dbFile, count), true) {
 		return
 	}
 
