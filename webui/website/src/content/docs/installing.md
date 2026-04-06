@@ -18,7 +18,15 @@ If you are using a server already set up by someone else, and you aren't plannin
    chmod +x hister
    ```
 
-3. Optionally, move it to somewhere on your `PATH`; for example, `/usr/local/bin/` (system-wide) or `~/.local/bin/` (per-user).
+3. **macOS only** — Remove the quarantine flag that macOS applies to downloaded files. Without this step, macOS will refuse to run the binary with a "cannot be opened because the developer cannot be verified" error:
+
+   ```bash
+   xattr -d com.apple.quarantine hister
+   ```
+
+   Alternatively, after attempting to run `hister` once, go to **System Settings → Privacy & Security** and click **Allow Anyway**.
+
+4. Optionally, move it to somewhere on your `PATH`; for example, `/usr/local/bin/` (system-wide) or `~/.local/bin/` (per-user).
 
 ## Building from Source
 
